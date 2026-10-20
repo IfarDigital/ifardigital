@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,17 +7,20 @@
 
 <title>IFAR Digital | Somos a Sua Conexão</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 --bg:#050505;
---bg2:#111111;
+--bg-secondary:#101010;
 --orange:#ff6a00;
---orange-light:#ff8c00;
+--orange-hover:#ff8c00;
 --white:#ffffff;
---gray:#d0d0d0;
+--gray:#cfcfcf;
 }
 
 *{
@@ -38,14 +40,44 @@ color:white;
 overflow-x:hidden;
 }
 
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(12px);
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+color:var(--orange);
+font-weight:800;
+letter-spacing:4px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--orange);
+}
+
 .hero{
 min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:50px 25px;
+padding:120px 25px 60px;
 position:relative;
 overflow:hidden;
 }
@@ -55,89 +87,93 @@ content:'';
 position:absolute;
 width:900px;
 height:900px;
+
 background:
 radial-gradient(circle,
-rgba(255,106,0,.30),
+rgba(255,106,0,.25),
 transparent 70%);
+
 animation:pulse 8s infinite;
 }
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.2);}
-100%{transform:scale(1);}
+@keyframes pulse {
+
+0%{
+transform:scale(1);
 }
 
-.logo{
-font-size:20px;
-letter-spacing:6px;
-font-weight:700;
-color:var(--orange);
+50%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+.hero-content{
+max-width:1000px;
 z-index:2;
-margin-bottom:30px;
 }
 
 .hero h1{
 font-size:5rem;
-max-width:1000px;
 line-height:1;
-z-index:2;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:var(--orange);
 }
 
 .hero h2{
-margin-top:20px;
-font-size:1.5rem;
 font-weight:300;
+margin-bottom:30px;
 color:var(--gray);
-z-index:2;
 }
 
 .hero p{
-max-width:850px;
-margin-top:35px;
 line-height:2;
 font-size:1.1rem;
 color:var(--gray);
-z-index:2;
+max-width:850px;
+margin:auto;
 }
 
 .btn{
 display:inline-block;
 margin-top:40px;
 padding:18px 40px;
-text-decoration:none;
 background:var(--orange);
 color:white;
-font-weight:700;
+text-decoration:none;
 border-radius:50px;
+font-weight:700;
 transition:.3s;
-z-index:2;
 }
 
 .btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 30px rgba(255,106,0,.7);
+background:var(--orange-hover);
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(255,106,0,.5);
 }
 
 section{
 padding:120px 10%;
 }
 
-.title{
+.section-title{
 font-size:3rem;
 text-align:center;
 margin-bottom:60px;
 }
 
 .about{
-max-width:1000px;
+max-width:900px;
 margin:auto;
 text-align:center;
-}
-
-.about p{
 line-height:2;
-font-size:1.1rem;
 color:var(--gray);
 }
 
@@ -149,62 +185,59 @@ gap:25px;
 
 .card{
 background:rgba(255,255,255,.04);
-border:1px solid rgba(255,106,0,.15);
-backdrop-filter:blur(12px);
+border:1px solid rgba(255,106,0,.1);
 padding:35px;
 border-radius:20px;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(255,106,0,.25);
+transform:translateY(-10px);
 border-color:var(--orange);
+box-shadow:0 0 30px rgba(255,106,0,.15);
 }
 
 .card h3{
 color:var(--orange);
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .card p{
-line-height:1.8;
 color:var(--gray);
+line-height:1.7;
 }
 
 .quote{
 text-align:center;
 font-size:2rem;
 font-weight:700;
-max-width:1000px;
+max-width:900px;
 margin:auto;
-color:white;
 }
 
 .founder{
-max-width:1000px;
-margin:auto;
 text-align:center;
+max-width:900px;
+margin:auto;
 }
 
 .founder p{
 line-height:2;
-font-size:1.1rem;
 color:var(--gray);
 }
 
 .cta{
-background:var(--bg2);
+background:var(--bg-secondary);
 text-align:center;
 }
 
 .cta h2{
 font-size:3rem;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .cta p{
-max-width:900px;
+max-width:800px;
 margin:auto;
 line-height:2;
 color:var(--gray);
@@ -213,14 +246,226 @@ color:var(--gray);
 .whatsapp{
 display:inline-block;
 margin-top:40px;
-padding:20px 42px;
-text-decoration:none;
+padding:20px 40px;
 background:#25D366;
 color:white;
-font-weight:bold;
+text-decoration:none;
 border-radius:50px;
-transition:.3s;
+font-weight:bold;
 }
 
-.whatsapp:hover{
-transform:
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,.06);
+color:#999;
+}
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero h2{
+font-size:1.2rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.cta h2{
+font-size:2rem;
+}
+
+.quote{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+IFAR DIGITAL
+</div>
+
+<div class="menu">
+
+<a href="#sobre">Sobre</a>
+<a href="#valores">Valores</a>
+<a href="#fundador">Fundador</a>
+<a href="#contato">Contato</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+SOMOS A SUA <span>CONEXÃO</span>
+</h1>
+
+<h2>
+Tecnologia próxima das pessoas.
+</h2>
+
+<p>
+A verdadeira conexão não começa com cabos.
+Ela começa com confiança.
+
+Conectamos pessoas, empresas e oportunidades através da tecnologia, do relacionamento e do compromisso com cada cliente.
+</p>
+
+<a href="#sobre" class="btn">
+Conheça Nossa História
+</a>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2 class="section-title">
+Quem Somos
+</h2>
+
+<div class="about">
+
+<p>
+
+A IFAR Digital nasceu da paixão por tecnologia e da certeza de que o atendimento humano ainda faz toda a diferença.
+
+Antes dos equipamentos.
+Antes dos contratos.
+Antes da venda.
+
+Vem o relacionamento.
+
+Porque mais importante do que vender tecnologia é construir confiança.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="valores">
+
+<h2 class="section-title">
+Nossos Valores
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Confiança</h3>
+<p>Relacionamentos construídos com transparência e respeito.</p>
+</div>
+
+<div class="card">
+<h3>Presença</h3>
+<p>Estamos próximos de quem precisa de nós.</p>
+</div>
+
+<div class="card">
+<h3>Inovação</h3>
+<p>Soluções modernas para conectar pessoas e negócios.</p>
+</div>
+
+<div class="card">
+<h3>Compromisso</h3>
+<p>Atendimento antes, durante e depois da contratação.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="quote">
+
+"Mais importante do que conectar dispositivos é conectar pessoas."
+
+</div>
+
+</section>
+
+<section id="fundador">
+
+<h2 class="section-title">
+Quem Está Por Trás Da IFAR Digital?
+</h2>
+
+<div class="founder">
+
+<p>
+
+Olá, sou Igor Ribeiro.
+
+Fundador da IFAR Digital.
+
+Meu propósito é construir uma empresa onde tecnologia, respeito e atendimento caminham juntos.
+
+Acredito que uma conexão verdadeira nasce da confiança.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="cta" id="contato">
+
+<h2>
+O Futuro Está Sendo Construído
+</h2>
+
+<p>
+
+Estamos desenvolvendo soluções para residências, empresas, agronegócio e conectividade avançada.
+
+A IFAR Digital está apenas começando sua jornada.
+
+</p>
+
+<a
+href="https://wa.me/553499266957"
+class="whatsapp"
+target="_blank">
+
+Fale Conosco
+
+</a>
+
+</section>
+
+<footer>
+
+© 2026 IFAR Digital LTDA
+
+<br><br>
+
+<strong>Somos a sua conexão.</strong>
+
+</footer>
+
+</body>
+
+</html>
