@@ -3,43 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IFAR Digital | Somos a Sua Conexão</title>
+<title>IFAR Digital | Somos a sua conexão</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050505;--bg2:#101010;--orange:#ff6a00;--orange2:#ff8c00;--gray:#cfcfcf}
+:root{--orange:#ff6a00;--orange2:#ff8c00;--bg:#050505;--bg2:#101010;--gray:#d0d0d0}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Montserrat,sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
-#stars{position:fixed;inset:0;z-index:0}
-nav{position:fixed;top:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.75);backdrop-filter:blur(15px);z-index:1000}
-.logo{font-weight:800;letter-spacing:4px;color:var(--orange)}
-.menu{display:flex;gap:24px}.menu a{text-decoration:none;color:#fff}.menu a:hover{color:var(--orange)}
-.menu-toggle{display:none;font-size:30px;cursor:pointer}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;position:relative}
-.hero-content{max-width:1000px;z-index:2}.hero h1{font-size:5rem}.hero h1 span{color:var(--orange);text-shadow:0 0 25px rgba(255,106,0,.8)}.hero h2{margin:20px 0;color:var(--gray);font-weight:300}.hero p{max-width:800px;margin:auto;line-height:2;color:var(--gray)}
-.btn{display:inline-block;margin-top:35px;padding:18px 36px;border-radius:40px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700}.btn:hover{background:var(--orange2)}
-section{padding:100px 8%;position:relative;z-index:2}.title{text-align:center;font-size:3rem;margin-bottom:50px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,106,0,.15);border-radius:22px;padding:30px;transition:.3s}.card:hover{transform:translateY(-10px);box-shadow:0 0 30px rgba(255,106,0,.25)}.card h3{color:var(--orange);margin-bottom:10px}
-.text{max-width:900px;margin:auto;text-align:center;line-height:2;color:var(--gray)}
-.timeline{max-width:900px;margin:auto}.item{border-left:3px solid var(--orange);padding:15px 0 15px 25px;margin-left:20px}.year{color:var(--orange);font-weight:800}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}.stat{padding:30px;background:rgba(255,255,255,.04);border-radius:20px}.num{font-size:3rem;color:var(--orange);font-weight:800}
-.cta{text-align:center;background:var(--bg2)}.cta p{max-width:850px;margin:auto;line-height:2;color:var(--gray)}
-.whatsapp{display:inline-block;margin-top:30px;padding:18px 36px;background:#25D366;color:#fff;text-decoration:none;border-radius:40px;font-weight:700}
-.float{position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:1001}
+#stars{position:fixed;inset:0;z-index:0}.content{position:relative;z-index:2}
+nav{position:fixed;top:0;left:0;width:100%;padding:18px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.8);backdrop-filter:blur(12px);z-index:1000}
+.logo{color:var(--orange);font-weight:800;letter-spacing:3px}.menu{display:flex;gap:24px}.menu a{color:#fff;text-decoration:none;position:relative}.menu a:after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--orange);transition:.3s}.menu a:hover:after{width:100%}.toggle{display:none;font-size:28px;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px}.hero h1{font-size:5rem}.hero h1 span{color:var(--orange);text-shadow:0 0 25px rgba(255,106,0,.8)}.hero h2{margin:20px 0;color:var(--gray);font-weight:300}.hero p,.text{max-width:850px;margin:auto;line-height:2;color:var(--gray)}
+.btn,.wbtn{display:inline-block;margin-top:30px;padding:16px 34px;border-radius:40px;text-decoration:none;color:#fff;font-weight:700;transition:.35s}.btn{background:var(--orange)}.wbtn{background:#25D366}.btn:hover,.wbtn:hover{transform:translateY(-5px) scale(1.05)}.btn:hover{box-shadow:0 0 25px rgba(255,106,0,.6)}.pulse{animation:pulse 2.5s infinite}@keyframes pulse{70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}}
+section{padding:100px 8%}.title{text-align:center;font-size:2.8rem;margin-bottom:40px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,106,0,.15);padding:25px;border-radius:20px;transition:.4s}.card:hover{transform:translateY(-10px) scale(1.04);box-shadow:0 0 30px rgba(255,106,0,.25)}.card h3{color:var(--orange);margin-bottom:10px}
+.timeline .item{border-left:3px solid var(--orange);padding:12px 0 12px 22px;margin-left:18px}.year{color:var(--orange);font-weight:800}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}.stat{text-align:center;background:rgba(255,255,255,.04);padding:25px;border-radius:20px}.num{font-size:3rem;color:var(--orange);font-weight:800}.cta{text-align:center;background:var(--bg2)}
+.reveal,.reveal-left,.reveal-right{opacity:0;transition:.9s}.reveal{transform:translateY(40px)}.reveal-left{transform:translateX(-60px)}.reveal-right{transform:translateX(60px)}.active{opacity:1!important;transform:none!important}
+.float{position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:1001}
 footer{text-align:center;padding:40px;color:#999}
-@media(max-width:768px){.hero h1{font-size:3rem}.menu{display:none;position:absolute;top:70px;right:15px;background:#111;padding:15px;border-radius:10px;flex-direction:column}.menu.active{display:flex}.menu-toggle{display:block}.title{font-size:2rem}}
+@media(max-width:768px){.hero h1{font-size:3rem}.toggle{display:block}.menu{display:none;position:absolute;top:65px;right:15px;background:#111;padding:15px;border-radius:10px;flex-direction:column}.menu.active{display:flex}.title{font-size:2rem}}
 </style>
 </head>
 <body>
 <canvas id="stars"></canvas>
-<nav><div class="logo">IFAR DIGITAL</div><div class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('active')">☰</div><div class="menu" id="menu"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a></div></nav>
-<section class="hero"><div class="hero-content"><h1>SOMOS A SUA <span>CONEXÃO</span></h1><h2>Tecnologia. Confiança. Futuro.</h2><p>A IFAR Digital conecta pessoas, empresas e oportunidades através da tecnologia e do atendimento humano.</p><a class="btn" href="#sobre">Conheça Nossa História</a></div></section>
-<section id="sobre"><h2 class="title">Quem Somos</h2><div class="text">Antes dos equipamentos. Antes dos contratos. Antes da venda. Vem o relacionamento. A IFAR Digital nasceu para aproximar pessoas da tecnologia através da confiança e da presença local.</div></section>
-<section><h2 class="title">Nossa Jornada</h2><div class="timeline"><div class="item"><div class="year">Experiência Técnica</div>Atuação em infraestrutura e fibra óptica.</div><div class="item"><div class="year">Fundação IFAR Digital</div>Nasce uma empresa focada em relacionamento e tecnologia.</div><div class="item"><div class="year">Próximo Passo</div>Consolidar presença e excelência em Iturama.</div></div></section>
-<section id="servicos"><h2 class="title">Soluções</h2><div class="cards"><div class="card"><h3>Infraestrutura FTTH</h3><p>Projetos e implantação.</p></div><div class="card"><h3>Fusão de Fibra</h3><p>Precisão e qualidade.</p></div><div class="card"><h3>Manutenção</h3><p>Suporte técnico especializado.</p></div><div class="card"><h3>Wi‑Fi Corporativo</h3><p>Conectividade para negócios.</p></div></div></section>
-<section><h2 class="title">IFAR Digital em Números</h2><div class="stats"><div class="stat"><div class="num">100%</div><div>Compromisso</div></div><div class="stat"><div class="num">24/7</div><div>Evolução</div></div><div class="stat"><div class="num">1</div><div>Propósito</div></div><div class="stat"><div class="num">∞</div><div>Possibilidades</div></div></div></section>
-<section id="fundador"><h2 class="title">Quem Está Por Trás Da IFAR Digital?</h2><div class="text">Olá, sou Igor Ribeiro. Fundador da IFAR Digital. Acredito que tecnologia deve aproximar pessoas, não apenas conectar dispositivos.</div></section>
-<section class="cta" id="contato"><h2 class="title">Pronto Para Construir Uma Nova Conexão?</h2><p>Seja para um projeto, parceria ou para conhecer mais sobre a IFAR Digital, estou pronto para conversar.</p><a class="whatsapp" href="https://wa.me/5534999266957" target="_blank">Falar no WhatsApp</a></section>
-<footer>© 2026 IFAR Digital LTDA<br><strong>Somos a sua conexão.</strong><br>Iturama - MG</footer><a class="float" href="https://wa.me/5534999266957" target="_blank">💬</a>
-<script>const c=document.getElementById('stars'),x=c.getContext('2d');function rs(){c.width=innerWidth;c.height=innerHeight}rs();onresize=rs;let s=[...Array(120)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*2}));(function d(){x.clearRect(0,0,c.width,c.height);x.fillStyle='#ff6a00';s.forEach(a=>{x.beginPath();x.arc(a.x,a.y,a.r,0,6.28);x.fill();a.y-=.15;if(a.y<0)a.y=c.height});requestAnimationFrame(d)})();</script>
+<div class="content">
+<nav><div class="logo">IFAR DIGITAL</div><div class="toggle" onclick="document.getElementById('menu').classList.toggle('active')">☰</div><div class="menu" id="menu"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#fundador">Fundador</a><a href="#contato">Contato</a></div></nav>
+<section class="hero"><div><h1>SOMOS A SUA <span>CONEXÃO</span></h1><h2>Tecnologia. Confiança. Futuro.</h2><p>A IFAR Digital conecta pessoas, empresas e oportunidades através da tecnologia e do relacionamento.</p><a href="#sobre" class="btn">Conheça nossa história</a></div></section>
+<section id="sobre" class="reveal"><h2 class="title">Quem somos</h2><div class="text">A IFAR Digital nasceu para aproximar pessoas da tecnologia através da confiança, da presença e do relacionamento.</div></section>
+<section class="reveal-left"><h2 class="title">Nossa jornada</h2><div class="timeline"><div class="item"><div class="year">Experiência técnica</div>Atuação em infraestrutura e fibra óptica.</div><div class="item"><div class="year">Fundação da IFAR Digital</div>Empresa focada em tecnologia e relacionamento.</div><div class="item"><div class="year">Hoje</div>Consolidando credibilidade em Iturama.</div></div></section>
+<section id="servicos" class="reveal-right"><h2 class="title">Soluções</h2><div class="cards"><div class="card"><h3>Infraestrutura FTTH</h3><p>Projetos e implantação.</p></div><div class="card"><h3>Fusão de fibra</h3><p>Precisão e qualidade.</p></div><div class="card"><h3>Manutenção</h3><p>Suporte especializado.</p></div><div class="card"><h3>Wi‑Fi corporativo</h3><p>Conectividade para empresas.</p></div></div></section>
+<section class="reveal"><h2 class="title">IFAR Digital em números</h2><div class="stats"><div class="stat"><div class="num">100%</div>Compromisso</div><div class="stat"><div class="num">24/7</div>Evolução</div><div class="stat"><div class="num">1</div>Propósito</div><div class="stat"><div class="num">∞</div>Possibilidades</div></div></section>
+<section id="fundador" class="reveal"><h2 class="title">Quem está por trás da IFAR Digital?</h2><div class="text">Olá, sou Igor Ribeiro. Acredito que tecnologia deve aproximar pessoas, não apenas conectar dispositivos.</div></section>
+<section id="contato" class="cta reveal"><h2 class="title">Pronto para construir uma nova conexão?</h2><div class="text">Seja para um projeto ou parceria, vamos conversar.</div><a class="wbtn pulse" href="https://wa.me/5534999266957" target="_blank">Falar no WhatsApp</a></section>
+<footer>© 2026 IFAR Digital LTDA<br>Somos a sua conexão.</footer>
+</div><a class="float" href="https://wa.me/5534999266957" target="_blank">💬</a>
+<script>const c=document.getElementById('stars'),x=c.getContext('2d');function r(){c.width=innerWidth;c.height=innerHeight}r();addEventListener('resize',r);let p=[...Array(120)].map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,s:Math.random()*2}));(function a(){x.clearRect(0,0,c.width,c.height);x.fillStyle='#ff6a00';p.forEach(i=>{x.beginPath();x.arc(i.x,i.y,i.s,0,6.28);x.fill();i.y-=0.15;if(i.y<0)i.y=c.height});requestAnimationFrame(a)})();const els=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('active')}),{threshold:.15}).observe(els[0]);els.forEach(el=>new IntersectionObserver(es=>es.forEach(it=>{if(it.isIntersecting)it.target.classList.add('active')}),{threshold:.15}).observe(el));</script>
 </body></html>
