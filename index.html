@@ -1,88 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IFAR Digital</title>
+<title>IFAR Digital | Somos a Sua Conexão</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+:root{
+--bg:#050505;
+--bg2:#111111;
+--orange:#ff6a00;
+--orange-light:#ff8c00;
+--white:#ffffff;
+--gray:#d0d0d0;
+}
+
+*{
 margin:0;
-font-family:Arial, sans-serif;
-background:#050816;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--bg);
 color:white;
-text-align:center;
+overflow-x:hidden;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-padding:20px;
+text-align:center;
+padding:50px 25px;
+position:relative;
+overflow:hidden;
 }
 
-h1{
-font-size:60px;
-margin-bottom:10px;
-color:#00d4ff;
+.hero::before{
+content:'';
+position:absolute;
+width:900px;
+height:900px;
+background:
+radial-gradient(circle,
+rgba(255,106,0,.30),
+transparent 70%);
+animation:pulse 8s infinite;
 }
 
-h2{
-font-size:28px;
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+.logo{
+font-size:20px;
+letter-spacing:6px;
+font-weight:700;
+color:var(--orange);
+z-index:2;
 margin-bottom:30px;
 }
 
-p{
-max-width:800px;
-font-size:20px;
-line-height:1.8;
+.hero h1{
+font-size:5rem;
+max-width:1000px;
+line-height:1;
+z-index:2;
+}
+
+.hero h2{
+margin-top:20px;
+font-size:1.5rem;
+font-weight:300;
+color:var(--gray);
+z-index:2;
+}
+
+.hero p{
+max-width:850px;
+margin-top:35px;
+line-height:2;
+font-size:1.1rem;
+color:var(--gray);
+z-index:2;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 30px;
-background:#00d4ff;
-color:black;
+margin-top:40px;
+padding:18px 40px;
 text-decoration:none;
-border-radius:30px;
+background:var(--orange);
+color:white;
+font-weight:700;
+border-radius:50px;
+transition:.3s;
+z-index:2;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px rgba(255,106,0,.7);
+}
+
+section{
+padding:120px 10%;
+}
+
+.title{
+font-size:3rem;
+text-align:center;
+margin-bottom:60px;
+}
+
+.about{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.about p{
+line-height:2;
+font-size:1.1rem;
+color:var(--gray);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,106,0,.15);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(255,106,0,.25);
+border-color:var(--orange);
+}
+
+.card h3{
+color:var(--orange);
+margin-bottom:20px;
+}
+
+.card p{
+line-height:1.8;
+color:var(--gray);
+}
+
+.quote{
+text-align:center;
+font-size:2rem;
+font-weight:700;
+max-width:1000px;
+margin:auto;
+color:white;
+}
+
+.founder{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.founder p{
+line-height:2;
+font-size:1.1rem;
+color:var(--gray);
+}
+
+.cta{
+background:var(--bg2);
+text-align:center;
+}
+
+.cta h2{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.cta p{
+max-width:900px;
+margin:auto;
+line-height:2;
+color:var(--gray);
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:40px;
+padding:20px 42px;
+text-decoration:none;
+background:#25D366;
+color:white;
 font-weight:bold;
+border-radius:50px;
+transition:.3s;
 }
 
-footer{
-padding:30px;
-background:#091224;
-}
-
-</style>
-
-</head>
-<body>
-
-<section class="hero">
-
-<h1>IFAR DIGITAL</h1>
-
-<h2>Somos a sua conexão.</h2>
-
-<p>
-Conectamos pessoas, negócios e oportunidades através da tecnologia,
-do relacionamento e da confiança.
-</p>
-
-<a class="btn" href="https://wa.me/55SEUNUMERO/section>
-
-<footer>
-
-<p>
-© 2026 IFAR Digital LTDA
-</p>
-
-</footer>
-
-</body>
-</html>
+.whatsapp:hover{
+transform:
