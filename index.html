@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,457 +14,280 @@
 <style>
 
 :root{
---bg:#050505;
---bg-secondary:#101010;
---orange:#ff6a00;
---orange-hover:#ff8c00;
---white:#ffffff;
---gray:#cfcfcf;
+    --bg:#050505;
+    --bg2:#101010;
+    --orange:#ff6a00;
+    --orange-light:#ff8c00;
+    --white:#ffffff;
+    --gray:#d0d0d0;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Montserrat',sans-serif;
-background:var(--bg);
-color:white;
-overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:white;
+    overflow-x:hidden;
 }
 
+/* PARTICULAS */
+
+#particles{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+.particle{
+    position:absolute;
+    border-radius:50%;
+    background:var(--orange);
+    opacity:.4;
+    box-shadow:
+    0 0 10px var(--orange),
+    0 0 20px var(--orange);
+    animation:floatParticle linear infinite;
+}
+
+@keyframes floatParticle{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    100%{
+        transform:translateY(-180px);
+        opacity:0;
+    }
+}
+
+/* MENU */
+
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:rgba(0,0,0,0.85);
-backdrop-filter:blur(12px);
-padding:20px 10%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:999;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,106,0,.15);
+    z-index:1000;
 }
 
 .logo{
-color:var(--orange);
-font-weight:800;
-letter-spacing:4px;
+    font-weight:800;
+    letter-spacing:4px;
+    color:var(--orange);
 }
 
 .menu a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    transition:.3s;
 }
 
 .menu a:hover{
-color:var(--orange);
+    color:var(--orange);
 }
 
+/* HERO */
+
 .hero{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 25px 60px;
-position:relative;
-overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 30px;
+    position:relative;
 }
 
 .hero::before{
-content:'';
-position:absolute;
-width:900px;
-height:900px;
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
 
-background:
-radial-gradient(circle,
-rgba(255,106,0,.25),
-transparent 70%);
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,106,0,.20),
+    transparent 70%
+    );
 
-animation:pulse 8s infinite;
+    animation:pulse 8s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulse{
 
-0%{
-transform:scale(1);
-}
+    0%{
+        transform:scale(1);
+    }
 
-50%{
-transform:scale(1.2);
-}
+    50%{
+        transform:scale(1.2);
+    }
 
-100%{
-transform:scale(1);
-}
+    100%{
+        transform:scale(1);
+    }
 
 }
 
 .hero-content{
-max-width:1000px;
-z-index:2;
+    max-width:1000px;
+    z-index:3;
 }
 
-.hero h1{
-font-size:5rem;
-line-height:1;
-margin-bottom:20px;
+.glow-title{
+    font-size:5rem;
+    line-height:1;
+    animation:titleGlow 3s infinite alternate;
 }
 
-.hero h1 span{
-color:var(--orange);
+.glow-title span{
+    color:var(--orange);
+}
+
+@keyframes titleGlow{
+
+    from{
+        text-shadow:
+        0 0 10px rgba(255,106,0,.4);
+    }
+
+    to{
+        text-shadow:
+        0 0 20px rgba(255,106,0,.8),
+        0 0 60px rgba(255,106,0,.8);
+    }
+
 }
 
 .hero h2{
-font-weight:300;
-margin-bottom:30px;
-color:var(--gray);
+    margin-top:20px;
+    color:var(--gray);
+    font-weight:300;
 }
 
 .hero p{
-line-height:2;
-font-size:1.1rem;
-color:var(--gray);
-max-width:850px;
-margin:auto;
+    max-width:850px;
+    margin:30px auto 0;
+    line-height:2;
+    color:var(--gray);
 }
 
 .btn{
-display:inline-block;
-margin-top:40px;
-padding:18px 40px;
-background:var(--orange);
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:700;
-transition:.3s;
+    display:inline-block;
+    margin-top:40px;
+    padding:18px 40px;
+    background:var(--orange);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
 }
 
 .btn:hover{
-background:var(--orange-hover);
-transform:translateY(-3px);
-box-shadow:0 0 25px rgba(255,106,0,.5);
+    transform:translateY(-3px);
+    background:var(--orange-light);
+    box-shadow:0 0 30px rgba(255,106,0,.5);
 }
 
+/* SEÇÕES */
+
 section{
-padding:120px 10%;
+    padding:120px 10%;
+    position:relative;
+    z-index:2;
 }
 
 .section-title{
-font-size:3rem;
-text-align:center;
-margin-bottom:60px;
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:60px;
 }
 
 .about{
-max-width:900px;
-margin:auto;
-text-align:center;
-line-height:2;
-color:var(--gray);
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    color:var(--gray);
 }
 
 .cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(255,106,0,.1);
-padding:35px;
-border-radius:20px;
-transition:.3s;
+    background:rgba(255,255,255,.03);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,106,0,.12);
+    padding:35px;
+    border-radius:25px;
+    transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
-border-color:var(--orange);
-box-shadow:0 0 30px rgba(255,106,0,.15);
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:
+    0 0 30px rgba(255,106,0,.20);
+
+    border-color:var(--orange);
 }
 
 .card h3{
-color:var(--orange);
-margin-bottom:15px;
+    color:var(--orange);
+    margin-bottom:15px;
 }
 
 .card p{
-color:var(--gray);
-line-height:1.7;
+    color:var(--gray);
+    line-height:1.8;
 }
 
 .quote{
-text-align:center;
-font-size:2rem;
-font-weight:700;
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:2rem;
+    font-weight:700;
 }
 
 .founder{
-text-align:center;
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
 .founder p{
-line-height:2;
-color:var(--gray);
-}
-
-.cta{
-background:var(--bg-secondary);
-text-align:center;
-}
-
-.cta h2{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-.cta p{
-max-width:800px;
-margin:auto;
-line-height:2;
-color:var(--gray);
-}
-
-.whatsapp{
-display:inline-block;
-margin-top:40px;
-padding:20px 40px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-}
-
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid rgba(255,255,255,.06);
-color:#999;
-}
-
-@media(max-width:768px){
-
-.menu{
-display:none;
-}
-
-.hero h1{
-font-size:3rem;
-}
-
-.hero h2{
-font-size:1.2rem;
-}
-
-.section-title{
-font-size:2rem;
-}
-
-.cta h2{
-font-size:2rem;
-}
-
-.quote{
-font-size:1.5rem;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<nav>
-
-<div class="logo">
-IFAR DIGITAL
-</div>
-
-<div class="menu">
-
-<a href="#sobre">Sobre</a>
-<a href="#valores">Valores</a>
-<a href="#fundador">Fundador</a>
-<a href="#contato">Contato</a>
-
-</div>
-
-</nav>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>
-SOMOS A SUA <span>CONEXÃO</span>
-</h1>
-
-<h2>
-Tecnologia próxima das pessoas.
-</h2>
-
-<p>
-A verdadeira conexão não começa com cabos.
-Ela começa com confiança.
-
-Conectamos pessoas, empresas e oportunidades através da tecnologia, do relacionamento e do compromisso com cada cliente.
-</p>
-
-<a href="#sobre" class="btn">
-Conheça Nossa História
-</a>
-
-</div>
-
-</section>
-
-<section id="sobre">
-
-<h2 class="section-title">
-Quem Somos
-</h2>
-
-<div class="about">
-
-<p>
-
-A IFAR Digital nasceu da paixão por tecnologia e da certeza de que o atendimento humano ainda faz toda a diferença.
-
-Antes dos equipamentos.
-Antes dos contratos.
-Antes da venda.
-
-Vem o relacionamento.
-
-Porque mais importante do que vender tecnologia é construir confiança.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="valores">
-
-<h2 class="section-title">
-Nossos Valores
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Confiança</h3>
-<p>Relacionamentos construídos com transparência e respeito.</p>
-</div>
-
-<div class="card">
-<h3>Presença</h3>
-<p>Estamos próximos de quem precisa de nós.</p>
-</div>
-
-<div class="card">
-<h3>Inovação</h3>
-<p>Soluções modernas para conectar pessoas e negócios.</p>
-</div>
-
-<div class="card">
-<h3>Compromisso</h3>
-<p>Atendimento antes, durante e depois da contratação.</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="quote">
-
-"Mais importante do que conectar dispositivos é conectar pessoas."
-
-</div>
-
-</section>
-
-<section id="fundador">
-
-<h2 class="section-title">
-Quem Está Por Trás Da IFAR Digital?
-</h2>
-
-<div class="founder">
-
-<p>
-
-Olá, sou Igor Ribeiro.
-
-Fundador da IFAR Digital.
-
-Meu propósito é construir uma empresa onde tecnologia, respeito e atendimento caminham juntos.
-
-Acredito que uma conexão verdadeira nasce da confiança.
-
-</p>
-
-</div>
-
-</section>
-
-<section class="cta" id="contato">
-
-<h2>
-O Futuro Está Sendo Construído
-</h2>
-
-<p>
-
-Estamos desenvolvendo soluções para residências, empresas, agronegócio e conectividade avançada.
-
-A IFAR Digital está apenas começando sua jornada.
-
-</p>
-
-<a
-href="https://wa.me/553499266957"
-class="whatsapp"
-target="_blank">
-
-Fale Conosco
-
-</a>
-
-</section>
-
-<footer>
-
-© 2026 IFAR Digital LTDA
-
-<br><br>
-
-<strong>Somos a sua conexão.</strong>
-
-</footer>
-
-</body>
-
-</html>
+    color:var(--gray);
+    line-
