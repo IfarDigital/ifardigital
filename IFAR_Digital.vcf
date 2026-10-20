@@ -1,9 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
+N:Digital;IFAR;;;
 FN:IFAR Digital
 ORG:IFAR Digital
 TITLE:Tecnologia e Conectividade
-TEL;TYPE=CELL:+55 34 99926-6957
+TEL;TYPE=CELL,VOICE:+5534999266957
 URL:https://ifardigital.com.br
+ADR;TYPE=WORK:;;Iturama;Iturama;MG;;Brasil
 NOTE:Somos a sua conexão.
 END:VCARD
