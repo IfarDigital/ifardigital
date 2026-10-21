@@ -1,11 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Digital;IFAR;;;
+N:;IFAR Digital;;;
 FN:IFAR Digital
 ORG:IFAR Digital
-TITLE:Tecnologia e Conectividade
-TEL;TYPE=CELL,VOICE:+5534999266957
+TITLE:Internet Fibra Óptica
+TEL;TYPE=CELL:+5534999266957
 URL:https://ifardigital.com.br
-ADR;TYPE=WORK:;;Iturama;Iturama;MG;;Brasil
-NOTE:Somos a sua conexão.
+ADR;TYPE=WORK:;;Iturama;MG;;;Brasil
+NOTE:Somos a sua conexão.\n\nInternet Fibra Óptica\nProvedor de Internet\nTecnologia e Conectividade\nTelecomunicações\nInfraestrutura FTTH\nWi‑Fi Corporativo\nRedes\n\nWhatsApp: +55 34 99926-6957\nSite: https://ifardigital.com.br
 END:VCARD
