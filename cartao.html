@@ -229,7 +229,22 @@ Tecnologia. Confiança. Futuro.
 </div>
 
 </div>
+<script>
 
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const origem =
+    params.get("origem");
+
+console.log(
+    "Origem:",
+    origem
+);
+
+</script>
 </body>
 
 </html>
