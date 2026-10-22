@@ -1,29 +1,46 @@
-const CACHE_NAME = 'ifar-digital-v1';
+const CACHE_NAME = "ifar-v1";
 
-const urlsToCache = [
-  '/cartao.html',
-  '/IFAR_Digital.vcf',
-  '/logo-192.png',
-  '/logo-512.png'
+const FILES = [
+  "/",
+  "/cartao.html",
+  "/manifest.json",
+  "/logo-192.png",
+  "/logo-512.png",
+  "/IFAR_Digital.vcf"
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener("install", event => {
 
   event.waitUntil(
 
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches
+      .open(CACHE_NAME)
+      .then(cache => cache.addAll(FILES))
 
+  );
+
+  self.skipWaiting();
+
+});
+
+self.addEventListener("activate", event => {
+
+  event.waitUntil(
+    self.clients.claim()
   );
 
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", event => {
 
   event.respondWith(
 
     caches.match(event.request)
-      .then(response => response || fetch(event.request))
+      .then(response => {
+
+        return response || fetch(event.request);
+
+      })
 
   );
 
