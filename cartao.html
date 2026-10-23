@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-  <link rel="manifest" href="/manifest.json">
-
-<meta name="theme-color" content="#ff6a00">
-
-<meta name="mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<meta name="apple-mobile-web-app-title" content="IFAR Digital">
-
-<link rel="apple-touch-icon" href="/logo-192.png">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -228,116 +213,7 @@ href="https://ifardigital.com.br">
 >
   🚀 Solicitar instalação
 </a>
-    <button
-id="installBtn"
-class="btn"
-
-style="display:none;">
-                <script>
-
-let deferredPrompt;
-
-window.addEventListener(
-'beforeinstallprompt',
-(e)=>{
-
-e.preventDefault();
-
-deferredPrompt = e;
-
-document
-.getElementById('installBtn')
-.style.display = 'inline-block';
-
-});
-
-document
-.getElementById('installBtn')
-.addEventListener(
-'click',
-async()=>{
-
-if(!deferredPrompt) return;
-
-deferredPrompt.prompt();
-
-});
-
-</script>
-
-📲 Instalar IFAR Digital
-
-</button>
-    
-
-</div>
-
-<div class="footer">
-
-IFAR Digital
-
-<br>
-
-Tecnologia. Confiança. Futuro.
-
-</div>
-
-</div>
-<script>
-
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-const origem =
-    params.get("origem");
-
-console.log(
-    "Origem:",
-    origem
-);
-
-</script>
-    <script>
-
-if('serviceWorker' in navigator){
-
-  window.addEventListener('load', () => {
-
-    navigator.serviceWorker.register(
-      '/service-worker.js'
-    );
-
-  });
-
-}
-
-</script>
-  <script>
-
-if ("serviceWorker" in navigator) {
-
-  window.addEventListener("load", () => {
-
-    navigator.serviceWorker
-      .register("/service-worker.js")
-      .then(() => {
-
-        console.log("PWA ativo");
-
-      })
-      .catch(error => {
-
-        console.error(error);
-
-      });
-
-  });
-
-}
-
-</script>
+ 
 </body>
 
 </html>
