@@ -105,7 +105,7 @@ body{
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
       <span class="t"><strong>Site</strong><span>ifardigital.com.br</span></span>
     </a>
-    <a class="link" id="salvar" href="#" download="Igor-Ribeiro-IFAR-Digital.vcf">
+    <a class="link" id="salvar" href="igor-ribeiro.vcf">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 20a7 7 0 0 1 14 0M19 8v6M16 11h6"/></svg>
       <span class="t"><strong>Salvar contato</strong><span>Adicionar à agenda do celular</span></span>
     </a>
@@ -128,24 +128,5 @@ body{
   <p class="foot">Iturama · Minas Gerais</p>
 </main>
 
-<script>
-(function () {
-  // Gera o arquivo de contato (.vcf) para o botão "Salvar contato".
-  var vcf = [
-    "BEGIN:VCARD",
-    "VERSION:3.0",
-    "N:Ribeiro;Igor;;;",
-    "FN:Igor Ribeiro",
-    "ORG:IFAR Digital",
-    "TITLE:Fundador",
-    "TEL;TYPE=CELL,VOICE:+5534999266957",
-    "EMAIL;TYPE=INTERNET:igor@ifardigital.com.br",
-    "URL:https://ifardigital.com.br",
-    "END:VCARD"
-  ].join("\r\n");
-  var a = document.getElementById("salvar");
-  if (a) a.href = "data:text/vcard;charset=utf-8," + encodeURIComponent(vcf);
-})();
-</script>
 </body>
 </html>
