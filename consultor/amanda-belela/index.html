@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex">
+<title>Amanda Belela | IFAR Digital</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Crect x='27' y='14' width='10' height='36' rx='2' fill='%23FF5F1F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --plate:#0B0B0C;
+  --btn:#111113;
+  --line:#1F1F22;
+  --line-btn:#26262A;
+  --fg:#fff;
+  --muted:#A1A1A6;
+  --dim:#6E6E73;
+  --accent:#FF5F1F; /* cor da marca: troque aqui */
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg)}
+body{
+  color:var(--fg);
+  font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;
+  min-height:100vh;
+  display:flex;justify-content:center;
+  padding:28px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px));
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:100%;max-width:420px;display:flex;flex-direction:column;gap:20px}
+.plate{background:var(--plate);border:1px solid var(--line);border-radius:28px}
+.hero{padding:32px 28px 36px;display:flex;flex-direction:column}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand b{font-size:28px;font-weight:800;letter-spacing:.14em}
+.brand span{font-size:11px;font-weight:600;letter-spacing:.38em;color:var(--accent)}
+.hero h1{margin:64px 0 6px;font-size:34px;font-weight:600;line-height:1.1;overflow-wrap:anywhere}
+.hero .role{margin:0;font-size:15px;color:var(--muted)}
+.hero .bar{width:36px;height:2px;background:var(--accent);margin:28px 0 20px}
+.hero .slogan{margin:0;font-size:20px;font-weight:300;line-height:1.35}
+.links{display:flex;flex-direction:column;gap:12px}
+.link{
+  display:flex;align-items:center;gap:16px;min-height:60px;padding:0 20px;
+  border-radius:18px;background:var(--btn);border:1px solid var(--line-btn);
+  color:var(--fg);text-decoration:none;transition:transform .15s ease,border-color .15s ease;
+}
+.link:hover{border-color:var(--accent)}
+.link:active{transform:scale(.985)}
+.link:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.link.primary{background:var(--accent);border-color:var(--accent);color:#000}
+.link svg{flex:none;width:24px;height:24px}
+.link .t{display:flex;flex-direction:column;min-width:0}
+.link .t strong{font-size:16px;font-weight:700}
+.link .t span{font-size:13px;color:#9A9AA0;overflow-wrap:anywhere}
+.link.primary .t span{color:rgba(0,0,0,.72)}
+.about{padding:28px;display:flex;flex-direction:column;gap:18px}
+.about .kicker{margin:0;font-size:11px;font-weight:600;letter-spacing:.28em;color:var(--accent)}
+.about ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.about li{display:flex;align-items:center;gap:12px;font-size:16px}
+.about li::before{content:"";width:6px;height:6px;border-radius:3px;background:var(--accent);flex:none}
+.trust{padding:24px 28px;display:flex;flex-direction:column;gap:6px}
+.trust strong{font-size:14px}
+.trust p{margin:0;font-size:13px;color:var(--muted);line-height:1.6}
+.foot{margin:4px 0 0;text-align:center;font-size:12px;letter-spacing:.04em;color:var(--dim)}
+@media (prefers-reduced-motion:reduce){.link{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <section class="plate hero">
+    <div class="brand"><b>IFAR</b><span>DIGITAL</span></div>
+    <h1 id="nome">Amanda Belela</h1>
+    <p class="role" id="cargo">Consultora de vendas · IFAR Digital</p>
+    <div class="bar"></div>
+    <p class="slogan">Somos a sua conexão.</p>
+  </section>
+
+  <nav class="links" aria-label="Contatos">
+    <a class="link primary" id="l-wa" href="https://wa.me/5534997639390">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"/></svg>
+      <span class="t"><strong>WhatsApp da consultora</strong><span id="t-wa">(34) 99763-9390</span></span>
+    </a>
+    <a class="link" id="l-tel" href="tel:+5534997639390">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      <span class="t"><strong>Ligar</strong><span id="t-tel">(34) 99763-9390</span></span>
+    </a>
+    <a class="link" href="https://ifardigital.com.br" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+      <span class="t"><strong>Conhecer a IFAR</strong><span>ifardigital.com.br</span></span>
+    </a>
+    <a class="link" href="https://instagram.com/ifardigital" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg>
+      <span class="t"><strong>Instagram</strong><span>@ifardigital</span></span>
+    </a>
+  </nav>
+
+  <section class="plate about">
+    <p class="kicker">CONECTIVIDADE PREMIUM</p>
+    <ul>
+      <li>Fibra óptica FTTH</li>
+      <li>Wi-Fi projetado para a sua casa</li>
+      <li>Soluções para empresas</li>
+    </ul>
+  </section>
+
+  <section class="plate trust">
+    <strong>Confirme esta consultora</strong>
+    <p>Antes de qualquer contratação, você pode conferir com a IFAR Digital que esta consultora é da nossa equipe.</p>
+    <a class="link" id="l-conf" href="https://wa.me/5534999266957" style="margin-top:10px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span class="t"><strong>Confirmar com a IFAR</strong><span>WhatsApp oficial (34) 99926-6957</span></span>
+    </a>
+  </section>
+
+  <p class="foot">IFAR Digital · CNPJ 37.589.460/0001-07 · Iturama-MG</p>
+</main>
+
+<script>
+/* ============================================================
+   DADOS DO CONSULTOR: edite só este bloco para cada pessoa
+   ============================================================ */
+var CONSULTOR = {
+  nome: "Amanda Belela",               // nome completo, como ele se apresenta
+  cargo: "Consultora de vendas · IFAR Digital",
+  whatsapp: "5534997639390",           // só números, com 55 + DDD + número
+  telefoneExibido: "(34) 99763-9390"   // como aparece escrito no cartão
+};
+/* ============================================================ */
+
+(function () {
+  var c = CONSULTOR;
+  var $ = function (id) { return document.getElementById(id); };
+  var empresaWa = "5534999266957";
+
+  $("nome").textContent = c.nome;
+  $("cargo").textContent = c.cargo;
+  $("t-wa").textContent = c.telefoneExibido;
+  $("t-tel").textContent = c.telefoneExibido;
+  document.title = c.nome + " | IFAR Digital";
+
+  var msg = "Olá! Conversei com " + c.nome + " da IFAR Digital e quero conhecer os planos.";
+  $("l-wa").href = "https://wa.me/" + c.whatsapp + "?text=" + encodeURIComponent(msg);
+  $("l-tel").href = "tel:+" + c.whatsapp;
+
+  var conf = "Olá! Quero confirmar que " + c.nome + " é consultora da IFAR Digital.";
+  $("l-conf").href = "https://wa.me/" + empresaWa + "?text=" + encodeURIComponent(conf);
+})();
+</script>
+</body>
+</html>
