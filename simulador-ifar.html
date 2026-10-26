@@ -701,7 +701,7 @@ cv.addEventListener("pointermove",function(e){
     }
     var c=clampPos(w[0]+S.drag.dx,w[1]+S.drag.dy);pos[S.drag.id].x=c[0];pos[S.drag.id].y=c[1];S.dirty=true;}
   else{
-    var nt=S.drag.th+(p[0]-S.drag.x)*.0018,tn=performance.now();
+    var nt=S.drag.th-(p[0]-S.drag.x)*.0018,tn=performance.now();
     if(S.drag.lt){var dtv=Math.max(8,tn-S.drag.lt);S.vel=.7*(S.vel||0)+.3*((nt-S.thetaT)/dtv);}S.drag.lt=tn;S.thetaT=nt;
     S.pitchT=Math.min(PMAX,Math.max(PMIN,S.drag.pi+(p[1]-S.drag.y)*.002));syncTop();
   }
@@ -735,8 +735,8 @@ $("bPlan").addEventListener("click",function(){
   if(S.pitchT>.93){S.pitchT=.52;S.thetaT=S.savedTheta;}else{S.savedTheta=S.thetaT;S.pitchT=1;S.thetaT=Math.round(S.thetaT/(Math.PI/2))*(Math.PI/2);}
   syncTop();
 });
-$("bL").addEventListener("click",function(){S.thetaT-=Math.PI/12;});
-$("bR").addEventListener("click",function(){S.thetaT+=Math.PI/12;});
+$("bL").addEventListener("click",function(){S.thetaT+=Math.PI/12;});
+$("bR").addEventListener("click",function(){S.thetaT-=Math.PI/12;});
 $("reset").addEventListener("click",function(){resetPos();});
 $("bModel").addEventListener("click",function(){if($("sheet").hidden)openSheet();else closeSheet();});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSheet();});
